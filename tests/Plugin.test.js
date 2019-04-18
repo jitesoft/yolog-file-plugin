@@ -10,6 +10,7 @@ describe('Test File plugin.', () => {
 
   test('Write to file', async () => {
     fs.appendFile = jest.fn((a, b, c) => c());
+    fs.mkdirSync = jest.fn(() => true);
     const timestamp = new Date().getTime();
     const plugin = new Plugin();
     await plugin.log('abc', timestamp, 'Message message');
@@ -20,6 +21,7 @@ describe('Test File plugin.', () => {
 
   test('Write to file with changed time format', async () => {
     fs.appendFile = jest.fn((a, b, c) => c());
+    fs.mkdirSync = jest.fn(() => true);
     const plugin = new Plugin();
     plugin.timeFormat = (_t) => 'howdy!';
     await plugin.log('abc', 123123123, 'Message message');
@@ -30,6 +32,7 @@ describe('Test File plugin.', () => {
 
   test('Write to file with changed format', async () => {
     fs.appendFile = jest.fn((a, b, c) => c());
+    fs.mkdirSync = jest.fn(() => true);
     const timestamp = new Date().getTime();
     const plugin = new Plugin();
     plugin.format = 'Changed [%s] FORMAT [%s] TO [%s] THIS!';

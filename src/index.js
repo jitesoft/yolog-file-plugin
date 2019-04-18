@@ -1,5 +1,5 @@
 import { Plugin } from '@jitesoft/yolog';
-import { appendFile } from 'fs';
+import fs from 'fs';
 import sprintf from '@jitesoft/sprintf';
 
 export default class File extends Plugin {
@@ -42,6 +42,10 @@ export default class File extends Plugin {
 
     this.#path = filePath;
     this.#fileName = fileName;
+
+    try {
+      fs.mkdirSync(this.#path, {recursive: true});
+    } catch (e) {}
   }
 
   /**
@@ -53,7 +57,7 @@ export default class File extends Plugin {
   #writeToFileAsPromise = async (filename, text) => {
     const path = `${this.#path}/${filename}`;
     return new Promise((resolve, reject) => {
-      appendFile(path, text, (error) => {
+      fs.appendFile(path, text, (error) => {
         if (error) {
           return reject(error);
         }
