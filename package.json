@@ -52,7 +52,7 @@
         "@jitesoft/eslint-config": "^1.0.2"
     },
     "scripts": {
-        "test": "jest",
+        "test": "eslint src/ tests/ && jest",
         "build": "cross-env NODE_ENV=production webpack -p"
     },
     "dependencies": {

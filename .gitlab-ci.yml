@@ -1,0 +1,34 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  image: jitesoft/node-base
+  variables:
+    NODE_ENV: development
+    BLUEBIRD_DEBUG: 0
+  before_script:
+    - npm ci
+  script:
+    - npm run test
+
+deploy:
+  stage: deploy
+  image: jitesoft/node-base:latest
+  variables:
+    NODE_ENV: development
+    BLUEBIRD_DEBUG: 0
+  before_script:
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+    - npm whoami
+    - npm ci
+  script:
+    - npm run build
+    - npm config set git-tag-version false
+    - npm version ${CI_COMMIT_TAG}
+    - npm publish --access public
+  after_script:
+    - rm -f ~/.npmrc
+  only:
+    - tags

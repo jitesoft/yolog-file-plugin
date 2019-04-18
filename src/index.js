@@ -6,9 +6,7 @@ export default class File extends Plugin {
   #fileName;
   #format = '[%s](%s): %s\n';
   #path;
-  #timeFormat = (ts) => {
-    return new Date(ts).toLocaleString()
-  };
+  #timeFormat = (ts) => new Date(ts).toLocaleString();
 
   /**
    * Change the output format of the time value.
@@ -52,7 +50,7 @@ export default class File extends Plugin {
    * @param {String} text
    * @return {Promise<void>}
    */
-  async #writeToFileAsPromise (filename, text) {
+  #writeToFileAsPromise = async (filename, text) => {
     const path = `${this.#path}/${filename}`;
     return new Promise((resolve, reject) => {
       appendFile(path, text, (error) => {
@@ -61,8 +59,8 @@ export default class File extends Plugin {
         }
         resolve();
       });
-    })
-  }
+    });
+  };
 
   /**
    * Method called when a log message is intercepted and the plugin is listening to the given tag.
@@ -73,7 +71,7 @@ export default class File extends Plugin {
    * @return {Promise<void>}
    */
   async log (tag, timestamp, message) {
-    return await this.#writeToFileAsPromise(
+    await this.#writeToFileAsPromise(
       this.#fileName,
       sprintf(this.#format, tag, (this.#timeFormat(timestamp)).toLocaleString(), message)
     );
@@ -82,4 +80,5 @@ export default class File extends Plugin {
 
 export {
   File as FilePlugin,
+  File as Plugin
 };
