@@ -44,8 +44,10 @@ export default class File extends Plugin {
     this.#fileName = fileName;
 
     try {
-      fs.mkdirSync(this.#path, {recursive: true});
-    } catch (e) {}
+      fs.mkdirSync(this.#path, { recursive: true });
+    } catch (e) {
+      // Do nothing.
+    }
   }
 
   /**
