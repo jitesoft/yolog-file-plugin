@@ -34,10 +34,10 @@
         "url": "https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file"
     },
     "peerDependencies": {
-        "@jitesoft/yolog": "^2.0"
+        "@jitesoft/yolog": ">=2.2.5"
     },
     "devDependencies": {
-        "@jitesoft/yolog": "^2.2",
+        "@jitesoft/yolog": ">=2.2.5",
         "core-js": "^3.0.1",
         "@babel/core": "^7.4.3",
         "@jitesoft/babel-preset-main": "^1.2.0",
@@ -56,6 +56,6 @@
         "build": "cross-env NODE_ENV=production webpack -p"
     },
     "dependencies": {
-        "@jitesoft/sprintf": "^0.0.4"
+        "@jitesoft/sprintf": "^0.0.5"
     }
 }

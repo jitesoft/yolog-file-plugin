@@ -8,24 +8,28 @@ module.exports = {
   optimization: {
     minimize: getEnv() === 'production'
   },
-  entry: {
-    'node': [
-      Path.join(__dirname, 'src', 'index.js')
-    ]
-  },
+  entry: [
+    Path.join(__dirname, 'src', 'index.js')
+  ]
+  ,
   externals: {
     '@jitesoft/yolog': {
-      root: "@jitesoft/yolog"
+      root: "@jitesoft/yolog",
+      commonjs2: '@jitesoft/yolog',
+      commonjs: '@jitesoft/yolog'
     }
   },
   target: 'node',
   output: {
-    filename: 'index.js'
+    filename: 'index.js',
+    globalObject: 'this',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
       {
         include: Path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
         test: /\.js$/,
         loader: 'babel-loader'
       }
