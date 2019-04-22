@@ -84,8 +84,6 @@ export default class File extends Plugin {
   }
 }
 
-
-
 export {
   File as FilePlugin,
   File as Plugin
