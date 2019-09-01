@@ -6,7 +6,6 @@
 [![npm](https://img.shields.io/npm/dt/@jitesoft/yolog-file-plugin)](https://www.npmjs.com/package/@jitesoft/yolog-file-plugin)
 [![Back project](https://img.shields.io/badge/Open%20Collective-Tip%20the%20devs!-blue.svg)](https://opencollective.com/jitesoft-open-source)
 
-
 Plugin for the [`@jitesoft/yolog`](https://www.npmjs.com/package/@jitesoft/yolog) logger to write to files.
 
 Due to the filesystem requirement a FS module is needed, this is not available in the browser, so this plugin
