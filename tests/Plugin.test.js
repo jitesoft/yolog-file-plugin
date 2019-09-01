@@ -26,7 +26,7 @@ describe('Test File plugin.', () => {
     plugin.timeFormat = (_t) => 'howdy!';
     await plugin.log('abc', 123123123, 'Message message');
     expect(fs.appendFile).toHaveBeenCalledWith(
-      'logs/debug.log', `[abc](howdy!): Message message\n`, expect.any(Function)
+      'logs/debug.log', '[abc](howdy!): Message message\n', expect.any(Function)
     );
   });
 
