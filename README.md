@@ -1,5 +1,12 @@
 # Yolog File Plugin
 
+[![Known Vulnerabilities](https://dev.snyk.io/test/npm/@jitesoft/yolog-file-plugin/badge.svg)](https://dev.snyk.io/test/npm/@jitesoft/yolog-file-plugin)
+[![pipeline status](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/badges/master/pipeline.svg)](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/commits/master)
+[![coverage report](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/badges/master/coverage.svg)](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/commits/master)
+[![npm](https://img.shields.io/npm/dt/@jitesoft/yolog-file-plugin)](https://www.npmjs.com/package/@jitesoft/yolog-file-plugin)
+[![Back project](https://img.shields.io/badge/Open%20Collective-Tip%20the%20devs!-blue.svg)](https://opencollective.com/jitesoft-open-source)
+
+
 Plugin for the [`@jitesoft/yolog`](https://www.npmjs.com/package/@jitesoft/yolog) logger to write to files.
 
 Due to the filesystem requirement a FS module is needed, this is not available in the browser, so this plugin
