@@ -4,3 +4,4 @@ tests
 .babelrc
 .gitignore
 .gitlab-ci.yml
+.github

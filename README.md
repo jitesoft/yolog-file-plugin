@@ -1,5 +1,6 @@
 # Yolog File Plugin
 
+[![npm (scoped)](https://img.shields.io/npm/v/@jitesoft/yolog-file-plugin)](https://www.npmjs.com/package/@jitesoft/yolog-file-plugin)
 [![Known Vulnerabilities](https://dev.snyk.io/test/npm/@jitesoft/yolog-file-plugin/badge.svg)](https://dev.snyk.io/test/npm/@jitesoft/yolog-file-plugin)
 [![pipeline status](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/badges/master/pipeline.svg)](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/commits/master)
 [![coverage report](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/badges/master/coverage.svg)](https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file/commits/master)
