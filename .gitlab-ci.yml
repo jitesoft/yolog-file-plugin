@@ -18,14 +18,10 @@ deploy:
   image: jitesoft/node:latest
   variables:
     NODE_ENV: development
-    BLUEBIRD_DEBUG: 0
   before_script:
-    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-    - npm whoami
     - npm ci
   script:
-    - npm run build
-    - npm config set git-tag-version false
+    - npm run build:prod
     - npm version ${CI_COMMIT_TAG}
     - npm publish --access public
   after_script:
