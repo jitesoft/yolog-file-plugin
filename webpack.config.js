@@ -10,11 +10,10 @@ module.exports = {
   },
   entry: [
     Path.join(__dirname, 'src', 'index.js')
-  ]
-  ,
+  ],
   externals: {
     '@jitesoft/yolog': {
-      root: "@jitesoft/yolog",
+      root: '@jitesoft/yolog',
       commonjs2: '@jitesoft/yolog',
       commonjs: '@jitesoft/yolog'
     }
