@@ -62,6 +62,6 @@
         "build:prod": "cross-env NODE_ENV=production webpack -p"
     },
     "dependencies": {
-        "@jitesoft/sprintf": "^1.0.0"
+        "@jitesoft/sprintf": "^1.0.1"
     }
 }
