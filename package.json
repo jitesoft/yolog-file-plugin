@@ -5,6 +5,7 @@
     "esnext": {
         "main": "src/index.js"
     },
+    "module": "src/index.js",
     "main": "dist/index.js",
     "author": {
         "name": "Johannes Tegnér",
