@@ -74,9 +74,10 @@ export default class File extends Plugin {
    * @param {String} tag Tag which was used when logging the message.
    * @param {Number} timestamp Timestamp (in ms) when the log was intercepted by the Yolog instance.
    * @param {String} message
+   * @param {Error} error      Error generated in the logger to be possible to use for call stack or for other reasons.
    * @return {Promise<void>}
    */
-  async log (tag, timestamp, message) {
+  async log (tag, timestamp, message, error) {
     await this.#writeToFileAsPromise(
       this.#fileName,
       sprintf(this.#format, tag, (this.#timeFormat(timestamp)).toLocaleString(), message)
