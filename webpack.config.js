@@ -12,14 +12,14 @@ module.exports = {
     Path.join(__dirname, 'src', 'index.js')
   ],
   externals: {
+    'fs': 'fs',
     '@jitesoft/yolog': '@jitesoft/yolog',
     '@jitesoft/sprintf': '@jitesoft/sprintf'
   },
   target: 'node',
   output: {
     filename: 'index.js',
-    globalObject: 'this',
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
