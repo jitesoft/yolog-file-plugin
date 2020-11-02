@@ -12,7 +12,7 @@ module.exports = {
     Path.join(__dirname, 'src', 'index.js')
   ],
   externals: {
-    'fs': 'fs',
+    fs: 'fs',
     '@jitesoft/yolog': '@jitesoft/yolog',
     '@jitesoft/sprintf': '@jitesoft/sprintf'
   },
