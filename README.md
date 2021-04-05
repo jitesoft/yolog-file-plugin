@@ -12,6 +12,8 @@ Plugin for the [`@jitesoft/yolog`](https://www.npmjs.com/package/@jitesoft/yolog
 Due to the filesystem requirement a FS module is needed, this is not available in the browser, so this plugin
 is not suitable in the browser!
 
+If you wish to log json strings in common json log format to file, be sure to check out the [yolog json plugin](https://github.com/jitesoft/yolog-json-plugin)!
+
 Usage:
 
 Install with your favorite package manager!
