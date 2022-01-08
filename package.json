@@ -38,28 +38,28 @@
         "url": "https://gitlab.com/jitesoft/open-source/javascript/yolog-plugins/file"
     },
     "peerDependencies": {
-        "@jitesoft/yolog": ">=3.1"
+        "@jitesoft/yolog": ">=3.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.13.14",
-        "@babel/eslint-parser": "^7.13.14",
-        "@jitesoft/babel-preset-main": "^2.9.0",
-        "@jitesoft/eslint-config": "^2.16.0",
-        "@jitesoft/yolog": "^3.1.6",
-        "babel-jest": "^27.0.0-next.7",
-        "babel-loader": "^8.2.2",
-        "core-js": "^3.10.0",
+        "@babel/core": "^7.16.7",
+        "@babel/eslint-parser": "^7.16.5",
+        "@jitesoft/babel-preset-main": "^2.16.0",
+        "@jitesoft/eslint-config": "^4.0.0",
+        "@jitesoft/yolog": "^3.2.1",
+        "babel-jest": "^27.4.6",
+        "babel-loader": "^8.2.3",
+        "core-js": "^3.20.2",
         "cross-env": "^7.0.3",
-        "eslint": "^7.23.0",
-        "jest": "^27.0.0-next.7",
-        "webpack": "^5.30.0",
-        "webpack-cli": "^4.6.0"
+        "eslint": "^8.6.0",
+        "jest": "^27.4.7",
+        "webpack": "^5.65.0",
+        "webpack-cli": "^4.9.1"
     },
     "scripts": {
         "test": "jest",
         "build:prod": "cross-env NODE_ENV=production webpack"
     },
     "dependencies": {
-        "@jitesoft/sprintf": "^1.1.3"
+        "@jitesoft/sprintf": "^1.2.1"
     }
 }
