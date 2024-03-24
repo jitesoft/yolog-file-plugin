@@ -24,7 +24,7 @@ export default class File extends Plugin {
 
   /**
    * Change format of the output.
-   * Currently uses the following format:
+   * Defaults to the following format:
    * [%s](%s): %s\n
    *
    * Will be passed `tag`, `timestamp`, `message`
